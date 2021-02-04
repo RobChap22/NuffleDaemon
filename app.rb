@@ -19,9 +19,9 @@ def bot_answer_to(a_question, user_name)
 
   # Agility
   if a_question.match?(/^catch$/i)
-    ""
+    "This player may re-roll a failed agility test when attempting to catch the ball."
   elsif a_question.match?(/^diving catch$/i)
-    ""
+    "This player may attempt to catch the ball if a pass, throw-in, or kick off causes it to land in a square within their Tackle Zone after scattering or deviating. This skill does not allow this player to attempt to catch the ball if it bounces into a square within their Tackle Zone.\n\nAdditionally, this player may apply a +1 modifier to any attempt to catch an accurate pass if they occupy the targeted square."
   elsif a_question.match?(/^diving tackle$/i)
     ""
   elsif a_question.match?(/^dodge$/i)
@@ -214,19 +214,19 @@ def bot_answer_to(a_question, user_name)
   end
 end
 
-def bot_jp_answer_to(a_question, user_name)
-  if a_question.match?(/(おはよう|こんにちは|こんばんは|ヤッホー|ハロー).*/)
-    "こんにちは#{user_name}さん！お元気ですか?"
-  elsif a_question.match?(/.*元気.*(？|\?｜か)/)
-    "私は元気です、#{user_name}さん"
-  elsif a_question.match?(/.*(le wagon|ワゴン|バゴン).*/i)
-    "#{user_name}さん... もしかして京都のLE WAGONプログラミング学校の話ですかね？ 素敵な画っこと思います！"
-  elsif a_question.end_with?('?','？')
-    "いい質問ですね、#{user_name}さん！"
-  else
-    ["そうですね！", "確かに！", "間違い無いですね！"].sample
-  end
-end
+# def bot_jp_answer_to(a_question, user_name)
+#   if a_question.match?(/(おはよう|こんにちは|こんばんは|ヤッホー|ハロー).*/)
+#     "こんにちは#{user_name}さん！お元気ですか?"
+#   elsif a_question.match?(/.*元気.*(？|\?｜か)/)
+#     "私は元気です、#{user_name}さん"
+#   elsif a_question.match?(/.*(le wagon|ワゴン|バゴン).*/i)
+#     "#{user_name}さん... もしかして京都のLE WAGONプログラミング学校の話ですかね？ 素敵な画っこと思います！"
+#   elsif a_question.end_with?('?','？')
+#     "いい質問ですね、#{user_name}さん！"
+#   else
+#     ["そうですね！", "確かに！", "間違い無いですね！"].sample
+#   end
+# end
 
 def send_bot_message(message, client, event)
   message_hash = { type: "text", text: message }
