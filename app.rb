@@ -15,25 +15,15 @@ def client
 end
 
 def bot_answer_to(a_question, user_name)
-  # Only answer to messages with "bob"
-  return "" unless a_question.downcase.include?("bob")
 
-  if a_question.match?(/say (hello|hi) to/i)
-    "Hello #{a_question.match(/say (hello|hi) to (.+)\b/i)[2]}!!"
-  elsif a_question.match?(/(Hi|Hey|Bonjour|Hi there|Hey there|Hello).*/i)
-    "Hello " + user_name + ", how are you doing today?"
-  elsif a_question.match?(/([\p{Hiragana}\p{Katakana}\p{Han}]+)/)
-    bot_jp_answer_to(a_question, user_name)
-  elsif a_question.match?(/how\s+.*are\s+.*you.*/i)
-    "I am fine, " + user_name
-  elsif a_question.include?("weather in")
-    fetch_weather(a_question)[:report]
-  elsif a_question.match?(/event+.*in\s+.*tokyo.*/i)
-    fetch_tokyo_events
-  elsif a_question.match?(/.*le wagon.*/i)
-    "Wait " + user_name + "... did you mean Le Wagon Tokyo!? These guys are just great!"
-  elsif a_question.end_with?('?')
-    "Good question, " + user_name + "!"
+  if a_question.match?(/^(assault|energy) shield$/i)
+    "A d"
+  elsif a_question.match?(/^BACKSTAB$/i)
+    "If the attacker is not within the target’s vision arc, add 1 to the attack’s Strength."
+  elsif a_question.match?(/^blaze$/i)
+    "After an attack with the Blaze trait has been resolved, roll a D6 if the target was hit but not taken Out Of Action. On a 4, 5 or 6, they become subject to the Blaze condition.\n\nWhen activated, a fighter subject to the Blaze condition suffers an immediate Strength 3, AP -1, Damage 1 hit before acting as follows:\n\n- If Prone and Pinned the fighter immediately becomes Standing and Active and acts as described below.\n\n- If Standing and Active the fighter moves 2D6\" in a random direction, determined by the Scatter dice. The fighter will stop moving if this movement would bring them within 1\" of an enemy fighter or into base contact with impassable terrain. If this movement brings them within 1⁄2\" of the edge of a level or platform, they risk falling as described on page 29. If this movement takes the fighter beyond the edge of a level or platform, they will simply fall. At the end of this move, the fighter may choose to become Prone and Pinned. The fighter may then attempt to put the fire out.\n\n- If Standing and Engaged or Prone and Seriously Injured, the fighter does not move and attempts to put the fire out.\n\nTo attempt to put the fire out, roll a D6, adding 1 to the result for each other Active friendly fighter within 1\". On a result of 6 or more, the flames go out and the Blaze marker is removed. Pinned or Seriously Injured fighters add 2 to the result of the roll to see if the flames go out."
+  elsif a_question.match?(/^burrowing$/i)
+    "Burrowing weapons can be fired at targets o"
   else
     ["I couldn't agree more.", "Great to hear that.", "Kinda make sense."].sample
   end
