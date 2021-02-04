@@ -14,25 +14,201 @@ def client
 end
 
 def bot_answer_to(a_question, user_name)
-  # Only answer to messages with "bob"
-  return "" unless a_question.downcase.include?("bob")
 
-  if a_question.match?(/say (hello|hi) to/i)
-    "Hello #{a_question.match(/say (hello|hi) to (.+)\b/i)[2]}!!"
-  elsif a_question.match?(/(Hi|Hey|Bonjour|Hi there|Hey there|Hello).*/i)
-    "Hello " + user_name + ", how are you doing today?"
-  elsif a_question.match?(/([\p{Hiragana}\p{Katakana}\p{Han}]+)/)
-    bot_jp_answer_to(a_question, user_name)
-  elsif a_question.match?(/how\s+.*are\s+.*you.*/i)
-    "I am fine, " + user_name
-  elsif a_question.include?("weather in")
-    fetch_weather(a_question)[:report]
-  elsif a_question.match?(/event+.*in\s+.*tokyo.*/i)
-    fetch_tokyo_events
-  elsif a_question.match?(/.*le wagon.*/i)
-    "Wait " + user_name + "... did you mean Le Wagon Tokyo!? These guys are just great!"
-  elsif a_question.end_with?('?')
-    "Good question, " + user_name + "!"
+  # SKILLS
+
+  # Agility
+  if a_question.match?(/^catch$/i)
+    ""
+  elsif a_question.match?(/^diving catch$/i)
+    ""
+  elsif a_question.match?(/^diving tackle$/i)
+    ""
+  elsif a_question.match?(/^dodge$/i)
+    ""
+  elsif a_question.match?(/^defensive$/i)
+    ""
+  elsif a_question.match?(/^jump up$/i)
+    ""
+  elsif a_question.match?(/^leap$/i)
+    ""
+  elsif a_question.match?(/^safe pair of hands$/i)
+    ""
+  elsif a_question.match?(/^sidestep$/i)
+    ""
+  elsif a_question.match?(/^sneaky git$/i)
+    ""
+  elsif a_question.match?(/^sprint$/i)
+    ""
+  elsif a_question.match?(/^sure feet$/i)
+    ""
+  # General
+  elsif a_question.match?(/^block$/i)
+    ""
+  elsif a_question.match?(/^dauntless$/i)
+    ""
+  elsif a_question.match?(/^dirty player$/i)
+    ""
+  elsif a_question.match?(/^fend$/i)
+    ""
+  elsif a_question.match?(/^frenzy$/i)
+    ""
+  elsif a_question.match?(/^kick$/i)
+    ""
+  elsif a_question.match?(/^pro$/i)
+    ""
+  elsif a_question.match?(/^shadowing$/i)
+    ""
+  elsif a_question.match?(/^strip ball$/i)
+    ""
+  elsif a_question.match?(/^sure hands$/i)
+    ""
+  elsif a_question.match?(/^tackle$/i)
+    ""
+  elsif a_question.match?(/^wrestle$/i)
+    ""
+  # Mutations
+  elsif a_question.match?(/^big hand$/i)
+    ""
+  elsif a_question.match?(/^claws$/i)
+    ""
+  elsif a_question.match?(/^disturbing presence$/i)
+    ""
+  elsif a_question.match?(/^extra arms$/i)
+    ""
+  elsif a_question.match?(/^foul appearance$/i)
+    ""
+  elsif a_question.match?(/^horns$/i)
+    ""
+  elsif a_question.match?(/^iron hard skin$/i)
+    ""
+  elsif a_question.match?(/^monstrous mouth$/i)
+    ""
+  elsif a_question.match?(/^prehensile tail$/i)
+    ""
+  elsif a_question.match?(/^tentacles$/i)
+    ""
+  elsif a_question.match?(/^two heads$/i)
+    ""
+  elsif a_question.match?(/^very long legs$/i)
+    ""
+  # Passing
+  elsif a_question.match?(/^accurate$/i)
+    ""
+  elsif a_question.match?(/^cannoneer$/i)
+    ""
+  elsif a_question.match?(/^cloud burster$/i)
+    ""
+  elsif a_question.match?(/^dump(-| )off$/i)
+    ""
+  elsif a_question.match?(/^fumblerooskie$/i)
+    ""
+  elsif a_question.match?(/^hail mary pass$/i)
+    ""
+  elsif a_question.match?(/^leader$/i)
+    ""
+  elsif a_question.match?(/^nerves of steel$/i)
+    ""
+  elsif a_question.match?(/^on the ball$/i)
+    ""
+  elsif a_question.match?(/^pass$/i)
+    ""
+  elsif a_question.match?(/^running pass$/i)
+    ""
+  elsif a_question.match?(/^safe pass$/i)
+    ""
+  # Strength
+  elsif a_question.match?(/^arm bar$/i)
+    ""
+  elsif a_question.match?(/^brawler$/i)
+    ""
+  elsif a_question.match?(/^break tackle$/i)
+    ""
+  elsif a_question.match?(/^grab$/i)
+    ""
+  elsif a_question.match?(/^guard$/i)
+    ""
+  elsif a_question.match?(/^juggernaut$/i)
+    ""
+  elsif a_question.match?(/^mighty blow$/i)
+    ""
+  elsif a_question.match?(/^multiple block$/i)
+    ""
+  elsif a_question.match?(/^pile driver$/i)
+    ""
+  elsif a_question.match?(/^stand firm$/i)
+    ""
+  elsif a_question.match?(/^strong arm$/i)
+    ""
+  elsif a_question.match?(/^thick skull$/i)
+    ""
+
+  # TRAITS
+  elsif a_question.match?(/^animal savagery$/i)
+    ""
+  elsif a_question.match?(/^animosity$/i)
+    ""
+  elsif a_question.match?(/^always hungry$/i)
+    ""
+  elsif a_question.match?(/^ball (and|&) chain$/i)
+    ""
+  elsif a_question.match?(/^bombardier$/i)
+    ""
+  elsif a_question.match?(/^bone( |)head$/i)
+    ""
+  elsif a_question.match?(/^chainsaw$/i)
+    ""
+  elsif a_question.match?(/^decay$/i)
+    ""
+  elsif a_question.match?(/^hypnotic gaze$/i)
+    ""
+  elsif a_question.match?(/^kick team(-| |)mate$/i)
+    ""
+  elsif a_question.match?(/^loner$/i)
+    ""
+  elsif a_question.match?(/^no hands$/i)
+    ""
+  elsif a_question.match?(/^plague(-| )ridden$/i)
+    ""
+  elsif a_question.match?(/^pogo stick$/i)
+    ""
+  elsif a_question.match?(/^projectile vomit$/i)
+    ""
+  elsif a_question.match?(/^really stupid$/i)
+    ""
+  elsif a_question.match?(/^regeneration$/i)
+    ""
+  elsif a_question.match?(/^right stuff$/i)
+    ""
+  elsif a_question.match?(/^secret weapon$/i)
+    ""
+  elsif a_question.match?(/^stab$/i)
+    ""
+  elsif a_question.match?(/^stunty$/i)
+    ""
+  elsif a_question.match?(/^swarming$/i)
+    ""
+  elsif a_question.match?(/^swoop$/i)
+    ""
+  elsif a_question.match?(/^take root$/i)
+    ""
+  elsif a_question.match?(/^titchy$/i)
+    ""
+  elsif a_question.match?(/^timber$/i)
+    ""
+  elsif a_question.match?(/^throw team(-| |)mate$/i)
+    ""
+  elsif a_question.match?(/^unchannelled fury$/i)
+    ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  
   else
     ["I couldn't agree more.", "Great to hear that.", "Kinda make sense."].sample
   end
