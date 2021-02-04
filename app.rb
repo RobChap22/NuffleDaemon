@@ -69,11 +69,11 @@ def bot_answer_to(a_question, user_name)
     "This player may use this Skill when a Both Down result is applied, either when they perform a Block action or when they are the target of a Block action. Instead of applying the Both Down result as normal, and regardless of any other Skills either player may possess, both players are Placed Prone."
   # Mutations
   elsif a_question.match?(/^big hand$/i)
-    ""
+    "This player may ignore any modifier(s) for being Marked or for Pouring Rain weather conditions when they attempt to pick up the ball."
   elsif a_question.match?(/^claws$/i)
-    ""
+    "When you make an Armour roll against an opposition player that was Knocked Down as the result of a Block action performed by this player, a roll of 8+ before applying any modifiers will break their armour, regardless of their actual Armour Value."
   elsif a_question.match?(/^disturbing presence$/i)
-    ""
+    "When an opposition player performs either a Pass action, a Throw Team-mate action, or a Throw Bomb Special action, or attempts to either interfere with a pass or to catch the ball, they must apply a -1 modifier to the test for each player on your team with this Skill that is within three squares of them, even if the player with this Skill is Prone, Stunned, or has lost their Tackle Zone."
   elsif a_question.match?(/^extra arms$/i)
     ""
   elsif a_question.match?(/^foul appearance$/i)
