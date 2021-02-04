@@ -75,9 +75,9 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^disturbing presence$/i)
     "When an opposition player performs either a Pass action, a Throw Team-mate action, or a Throw Bomb Special action, or attempts to either interfere with a pass or to catch the ball, they must apply a -1 modifier to the test for each player on your team with this Skill that is within three squares of them, even if the player with this Skill is Prone, Stunned, or has lost their Tackle Zone."
   elsif a_question.match?(/^extra arms$/i)
-    ""
+    "This player may apply a +1 modifier when they attempt to pick up or catch the ball, or when they attempt to interfere with a pass."
   elsif a_question.match?(/^foul appearance$/i)
-    ""
+    "When an opposition player declares a Block action targeting this player (on its own or as part of a Blitz action), or any Special action that targets this player, their coach must first roll a D6, even if this player has lost their Tackle Zone. On a roll of 1, the player cannot perform the declared action and the action is wasted."
   elsif a_question.match?(/^horns$/i)
     ""
   elsif a_question.match?(/^iron hard skin$/i)
