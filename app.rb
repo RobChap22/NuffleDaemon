@@ -94,23 +94,23 @@ def bot_answer_to(a_question, user_name)
     "This player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player (or to Leap over an empty square or a square occupied by a Standing player, if this player has the Leap skill) by 1, to a minimum of -1.\n\nAdditionally, this player may apply a +2 modifier to any attempts to interfere with a pass they make.\n\nFinally, this player ignores the Cloud Burster skill."
   # Passing
   elsif a_question.match?(/^accurate$/i)
-    ""
+    "When this player performs a Quick Pass action or a Short Pass action, you may apply an additional +1 modifier to the Passing Ability test."
   elsif a_question.match?(/^cannoneer$/i)
-    ""
+    "When this player performs a Long Pass action or a Long Bomb Pass action, you may apply an additional +1 modifier to the Passing Ability test."
   elsif a_question.match?(/^cloud burster$/i)
-    ""
+    "When this player performs a Long Pass action or a Long Bomb Pass action, you may choose to make the opposing coach re-roll a successful attempt to interfere with the pass."
   elsif a_question.match?(/^dump(-| )off$/i)
-    ""
+    "If this player is nominated as the target of a Block action (or a Special action granted by a Skill or Trait that can be performed instead of a Block action) and if they are in possession of the ball, they may immediately perform a Quick Pass action, interrupting the activation of the player performing the Block action (or Special action) to do so. This Quick Pass action cannot cause a Turnover, but otherwise all of the normal rules for passing the ball apply. Once the Quick Pass action is resolved, the active player performs the Block action and their team turn continues."
   elsif a_question.match?(/^fumblerooskie$/i)
-    ""
+    "When this player performs a Move or Blitz action whilst in possession of the ball, they may choose to 'drop' the ball. The ball may be placed in any square the player vacates during their movement and does not bounce. No Turnover is caused."
   elsif a_question.match?(/^hail mary pass$/i)
-    ""
+    "When this player performs a Pass action (or a Throw Bomb action), the target square can be anywhere on the pitch and the range ruler does not need to be used. A Hail Mary pass is never accurate, regardless of the result of the Passing Ability test it will always be inaccurate at best. A Passing Ability test is made and can be re-rolled as normal in order to determine if the Hail Mary pass is wildly inaccurate or is fumbled. A Hail Mary pass cannot be interfered with. This Skill may not be used in a Blizzard."
   elsif a_question.match?(/^leader$/i)
-    ""
+    "A team which has one or more players with this Skill gains a single extra team re-roll, called a Leader re-roll. However, the Leader re-roll can only be used if there is at least one player with this Skill on the pitch (even if the player with this Skill is Prone, Stunned, or has lost their Tackle Zone). If all players with this Skill are removed from play before the Leader re-roll is used, it is lost. The Leader re-roll can be carried over into extra time if it is not used, but the team does not receive a new one at the start of extra time. Unlike standard Team Re-rolls, the Leader Re-roll cannot be lost due to a Halfling Master Chef. Otherwise, the Leader re-roll is treated just like a normal team re-roll."
   elsif a_question.match?(/^nerves of steel$/i)
-    ""
+    "This player may ignore any modifier(s) for being Marked when they attempt to perform a Pass action, attempt to catch the ball, or attempt to interfere with a pass."
   elsif a_question.match?(/^on the ball$/i)
-    ""
+    "This player "
   elsif a_question.match?(/^pass$/i)
     ""
   elsif a_question.match?(/^running pass$/i)
