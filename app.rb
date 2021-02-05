@@ -210,7 +210,7 @@ def bot_answer_to(a_question, user_name)
   #   ""
   
   else
-    ["I couldn't agree more.", "Great to hear that.", "Kinda make sense."].sample
+    ["Wot?", "Huh?", "You wot?", "Zug-zug!", "Not 'eard of that.", "I'm just a simple daemon, sir, please be more clear."].sample
   end
 end
 
