@@ -119,29 +119,29 @@ def bot_answer_to(a_question, user_name)
     "Should this player fumble a Pass action, the ball is not dropped, does not bounce from the square this player occupies, and no Turnover is caused. Instead, this player retains possession of the ball and their activation ends."
   # Strength
   elsif a_question.match?(/^arm bar$/i)
-    ""
+    "If an opposition player Falls Over as the result of failing their Agility test when attempting to Dodge, Jump, or Leap out of a square in which they were being Marked by this player, you may apply a +1 modifier to either the Armour roll or Injury roll. This modifier may be applied after the roll has been made and may be applied even if this player is now Prone.\n\nIf the opposition player was being Marked by more than one player with this Skill, only one player may use it."
   elsif a_question.match?(/^brawler$/i)
-    ""
+    "When this player performs a Block action on its own (but not as part of a Blitz action), this player may re-roll a single Both Down result."
   elsif a_question.match?(/^break tackle$/i)
-    ""
+    "Once during their activation, after making an Agility test in order to Dodge, this player may modify the dice roll by +1 if their Strength characteristic is 4 or less, or by +2 if their Strength characteristic is 5 or more."
   elsif a_question.match?(/^grab$/i)
-    ""
+    "When this player performs a Block action (on its own or as part of a Blitz action), using this Skill prevents the target of the Block action from using the Side Step skill.\n\nAdditionally, when this player performs a Block action on its own (but not as part of a Blitz action), if the target is pushed back, this player may choose any unoccupied square adjacent to the target to push that player into. If there are no unoccupied squares, this Skill cannot be used.\n\nA player with this Skill cannot also have the Frenzy skill."
   elsif a_question.match?(/^guard$/i)
-    ""
+    "This player can offer both offensive and defensive assists regardless of how many opposition players are Marking them."
   elsif a_question.match?(/^juggernaut$/i)
-    ""
+    "When this player performs a Block action as part of a Blitz action (but not on its own), they may choose to treat a Both Down result as a Push Back result. In addition, when this player performs a Block action as part of a Blitz action, the target of the Block action may not use the Fend, Stand FIrm, or Wrestle skills."
   elsif a_question.match?(/^mighty blow$/i)
-    ""
+    "When an opposition player is Knocked Down as the result of a Block action performed by this player (on its own or as part of a Blitz action), you may choose to modify either the Armour roll or Injury roll by the amount shown in brackets. This modifier may be applied after the roll has been made.\n\nThis Skill cannot be used with the Stab or Chainsaw traits."
   elsif a_question.match?(/^multiple block$/i)
-    ""
+    "When this player performs a Block action on its own (but not as part of a Blitz action), they may choose to perform two Block actions, each targeting a different player they are Marking. However, doing so will reduce this player's Strength characteristic by 2 for the duration of this activation. Both Block actions are performed simultaneously, meaning both are resolved in full even if one or both result in a Turnover. The dice rolls for each Block action should be kept separate to avoid confusion. This player cannot follow-up when using this Skill.\n\nNote that choosing to use this Skill means this player will be unable to use the Franzy skill during the same activation."
   elsif a_question.match?(/^pile driver$/i)
-    ""
+    "When an opposition player is Knocked Down by this player as the result of a Block action (on its own or as part of a Blitz action), this player may immediately commit a free Foul action against the Knocked Down player. To use this Skill, this player must be Standing after the Block dice result has been selected and applied, and must occupy a square adjacent to the Knocked Down player. After using this Skill, this player is Placed Prone and their activation ends immediately."
   elsif a_question.match?(/^stand firm$/i)
-    ""
+    "This player may choose not to be pushed back, either as the result of a Block action made against them or by a chain-push. Using this Skill does not prevent an opposition player with the Frenzy skill from performing a second Block action if this player is still Standing after the first."
   elsif a_question.match?(/^strong arm$/i)
-    ""
+    "This player may apply a +1 modifier to any Passing Ability test rolls they make when performing a Throw Team-mate action.\n\nA player that does not have the Throw Team-mate trait cannot have this Skill."
   elsif a_question.match?(/^thick skull$/i)
-    ""
+    "When an Injury roll is made against this player (even if this player is Prone, Stunned, or has lost their Tackle Zone), they can only be KO'd on a roll of 9, and will treat a roll of 8 as a Stunned result. If this player also has the Stunty trait, they can only be KO'd on a roll of 8, and will treat a roll of 7 as a Stunned result. All other results are unaffected."
 
   # TRAITS
   elsif a_question.match?(/^animal savagery$/i)
