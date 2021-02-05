@@ -79,19 +79,19 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^foul appearance$/i)
     "When an opposition player declares a Block action targeting this player (on its own or as part of a Blitz action), or any Special action that targets this player, their coach must first roll a D6, even if this player has lost their Tackle Zone. On a roll of 1, the player cannot perform the declared action and the action is wasted."
   elsif a_question.match?(/^horns$/i)
-    ""
+    "When this player performs a Block action as part of a Blitz action (but not on its own), you may apply a +1 modifier to this player\'s Strength characteristic. This modifier is applied before counting assists, before applying any other Strength modifiers, and before using any other Skills or Traits."
   elsif a_question.match?(/^iron hard skin$/i)
-    ""
+    "The Claws skill cannot be used when making an Armour roll against this player."
   elsif a_question.match?(/^monstrous mouth$/i)
-    ""
+    "This player may re-roll any failed attempt to catch the ball. In addition, the Strip Ball skill cannot be used against this player."
   elsif a_question.match?(/^prehensile tail$/i)
-    ""
+    "When an active opposition player attempts to Dodge, Jump, or Leap in order to vacate a square in which they are being Marked by this player, there is an additional -1 modifier applied to the active player\'s Agility test.\n\nIf the opposition player is being Marked by more than one player with this Mutation, only one player may use it."
   elsif a_question.match?(/^tentacles$/i)
-    ""
+    "This player can use this Skill when an opposition player they are Marking voluntarily moves out of a square within this player\'s Tackle Zone. Roll a D6, adding the ST of this player to the roll and then subtracting the ST of the opposition player. If the result is 6 or higher, or if the roll is a natural 6, the opposition player is held firmly in place and their movement comes to an end. If, however, the result is 5 or lower, or if the roll is a natural 1, this Skill has no further effect.\n\nA player may use this Skill any number of times per turn, during either team's turn. If an opposition player is being Marked by more than one player with this Skill, only one player may use it."
   elsif a_question.match?(/^two heads$/i)
-    ""
+    "This player may apply a +1 modifier to the Agility test when they attempt to Dodge."
   elsif a_question.match?(/^very long legs$/i)
-    ""
+    "This player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player (or to Leap over an empty square or a square occupied by a Standing player, if this player has the Leap skill) by 1, to a minimum of -1.\n\nAdditionally, this player may apply a +2 modifier to any attempts to interfere with a pass they make.\n\nFinally, this player ignores the Cloud Burster skill."
   # Passing
   elsif a_question.match?(/^accurate$/i)
     ""
