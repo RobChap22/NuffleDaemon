@@ -110,13 +110,13 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^nerves of steel$/i)
     "This player may ignore any modifier(s) for being Marked when they attempt to perform a Pass action, attempt to catch the ball, or attempt to interfere with a pass."
   elsif a_question.match?(/^on the ball$/i)
-    "This player "
+    "This player may move up to three squares (regardless of their MA), following all of the normal movement rules, when the opposing coach declares that one of their players is going to perform a Pass action. This move is made after the range has been measured and the target square declared, but before the active player makes a Passing Ability test. Making this move interrupts the activation of the opposing player performing the pass action. A player may use this Skill when an opposition player uses the Dump-off skill, but should this player Fall Over whilst moving, a Turnover is caused.\n\nAdditionally, during each Start of Drive sequence, after Step 2 but before Step 3, one Open player with this Skill on the receiving team may move up to three squares (regardless of their MA). This Skill may not be used if a touchback is caused when the kick deviates and does not allow the player to cross into their opponent's half of the pitch."
   elsif a_question.match?(/^pass$/i)
-    ""
+    "This player may re-roll a failed Passing Ability test when performing a Pass action."
   elsif a_question.match?(/^running pass$/i)
-    ""
+    "If this player performs a Quick Pass action, their activation does not have to end once the pass is resolved. If you wish and if this player has not used their full Movement Allowance, they may continue to move after resolving the pass."
   elsif a_question.match?(/^safe pass$/i)
-    ""
+    "Should this player fumble a Pass action, the ball is not dropped, does not bounce from the square this player occupies, and no Turnover is caused. Instead, this player retains possession of the ball and their activation ends."
   # Strength
   elsif a_question.match?(/^arm bar$/i)
     ""
