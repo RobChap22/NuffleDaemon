@@ -18,7 +18,9 @@ def bot_answer_to(a_question, user_name)
   # SKILLS
 
   # Agility
-  if a_question.match?(/^catch$/i)
+  if a_question.match?(/^AGILITY$/i)
+    "A1: Catch\nA2: Diving Catch\nA3: Diving Tackle\nA4: Dodge\nA5: Defensive\nA6: Jump Up\nB1: Leap\nB2: Safe Pair of Hands\nB3: Sidestep\nB4: Sneaky Git\nB5: Sprint\nB6: Sure Feet"
+  elsif a_question.match?(/^catch$/i)
     "This player may re-roll a failed agility test when attempting to catch the ball."
   elsif a_question.match?(/^diving catch$/i)
     "This player may attempt to catch the ball if a pass, throw-in, or kick off causes it to land in a square within their Tackle Zone after scattering or deviating. This skill does not allow this player to attempt to catch the ball if it bounces into a square within their Tackle Zone.\n\nAdditionally, this player may apply a +1 modifier to any attempt to catch an accurate pass if they occupy the targeted square."
@@ -43,6 +45,8 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^sure feet$/i)
     "Once per team turn, during their activation, this player may re-roll the D6 when attempting to Rush."
   # General
+  elsif a_question.match?(/^GENERAL$/i)
+    "A1: Block\nA2: Dauntless\nA3: Dirty Player\nA4: Fend\nA5: Frenzy\nA6: Kick\nB1: Pro\nB2: Shadowing\nB3: Strip Ball\nB4: Sure Hands\nB5: Tackle\nB6: Wrestle"
   elsif a_question.match?(/^block$/i)
     "When a Both Down result is applied during a Block action, this player may choose to ignore it and not get Knocked Down, as described on page 57."
   elsif a_question.match?(/^dauntless$/i)
@@ -68,6 +72,8 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^wrestle$/i)
     "This player may use this Skill when a Both Down result is applied, either when they perform a Block action or when they are the target of a Block action. Instead of applying the Both Down result as normal, and regardless of any other Skills either player may possess, both players are Placed Prone."
   # Mutations
+  elsif a_question.match?(/^MUTATION(S|)$/i)
+    "A1: Big Hand\nA2: Claws\nA3: Disturbing Presence\nA4: Extra Arms\nA5: Foul Appearance\nA6: Horns\nB1: Iron Hard Skin\nB2: Monstrous Mouth\nB3: Prehensile Tail\nB4: Tentacles\nB5: Two Heads\nB6: Very Long Legs"
   elsif a_question.match?(/^big hand$/i)
     "This player may ignore any modifier(s) for being Marked or for Pouring Rain weather conditions when they attempt to pick up the ball."
   elsif a_question.match?(/^claws$/i)
@@ -93,6 +99,8 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^very long legs$/i)
     "This player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player (or to Leap over an empty square or a square occupied by a Standing player, if this player has the Leap skill) by 1, to a minimum of -1.\n\nAdditionally, this player may apply a +2 modifier to any attempts to interfere with a pass they make.\n\nFinally, this player ignores the Cloud Burster skill."
   # Passing
+  elsif a_question.match?(/^PASSING$/i)
+    "A1: Accurate\nA2: Cannoneer\nA3: Cloud Burster\nA4: Dump-off\nA5: Fumblerooskie\nA6: Hail Mary Pass\nB1: Leader\nB2: Nerves of Steel\nB3: On the Ball\nB4: Pass\nB5: Running Pass\nB6: Safe Pass"
   elsif a_question.match?(/^accurate$/i)
     "When this player performs a Quick Pass action or a Short Pass action, you may apply an additional +1 modifier to the Passing Ability test."
   elsif a_question.match?(/^cannoneer$/i)
@@ -118,6 +126,8 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^safe pass$/i)
     "Should this player fumble a Pass action, the ball is not dropped, does not bounce from the square this player occupies, and no Turnover is caused. Instead, this player retains possession of the ball and their activation ends."
   # Strength
+elsif a_question.match?(/^STRENGTH$/i)
+  "A1: Arm Bar\nA2: Brawler\nA3: Break Tackle\nA4: Grab\nA5: Guard\nA6: Juggernaut\nB1: Mighty Blow\nB2: Multiple Block\nB3: Pile Driver\nB4: Stand Firm\nB5: Strong Arm\nB6:Thick Skull"
   elsif a_question.match?(/^arm bar$/i)
     "If an opposition player Falls Over as the result of failing their Agility test when attempting to Dodge, Jump, or Leap out of a square in which they were being Marked by this player, you may apply a +1 modifier to either the Armour roll or Injury roll. This modifier may be applied after the roll has been made and may be applied even if this player is now Prone.\n\nIf the opposition player was being Marked by more than one player with this Skill, only one player may use it."
   elsif a_question.match?(/^brawler$/i)
