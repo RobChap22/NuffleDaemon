@@ -165,7 +165,7 @@ elsif a_question.match?(/^STRENGTH$/i)
   elsif a_question.match?(/^bombardier$/i)
     ""
   elsif a_question.match?(/^bone( |)head$/i)
-    ""
+    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6:\n\n• On a roll of 1, this player forgets what they are doing and their activation ends immediately. Additionally, this player loses their Tackle Zone until they are next activated.\n• On a roll of 2+, this player continues their activation as normal and completes their declared action.\n\nIf you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
   elsif a_question.match?(/^chainsaw$/i)
     ""
   elsif a_question.match?(/^decay$/i)
@@ -173,41 +173,41 @@ elsif a_question.match?(/^STRENGTH$/i)
   elsif a_question.match?(/^hypnotic gaze$/i)
     ""
   elsif a_question.match?(/^kick team(-| |)mate$/i)
-    ""
+    "Once per team turn, in addition to another player performing a Pass or a Throw Team-mate action, a single player with this Trait on the active team can perform a 'Kick Team-mate' Special action and attempt to kick a Standing team-mate with the Right Stuff trait that is in a square adjacent to them.\n\nTo perform a Kick Team-mate Special action, follow the rules for Throw Team-mate actions as described on page 52.\n\nHowever, if the Kick Team-mate Special action is fumbled, the kicked player is automatically removed from play and an Injury roll is made against them, treating a Stunned result as a KO'd result (note that, if the player that performed this action also has the Mighty Blow (+X) skill, the coach of the opposing team may use that Skill on this Injury roll). If the kicked player was in possession of the ball when removed from play, the ball will bounce from the square they occupied."
   elsif a_question.match?(/^loner$/i)
-    ""
+    "If this player wishes to use a team re-roll, roll a D6. If you roll equal to or higher than the target number shown in brackets, this player may use the team re-roll as normal. Otherwise, the original result stands without being re-rolled but the team re-roll is lost just as if it had been used."
   elsif a_question.match?(/^no hands$/i)
-    ""
+    "This player is unable to take possession of the ball. They may not attempt to pick it up, to catch it, or attempt to interfere with a pass. Any attempt to do so will automatically fail, causing the ball to bounce. Should this player voluntarily move into a square in which the ball is placed, they cannot attempt to pick it up. The ball will bounce and a Turnover is caused as if this player had failed an attempt to pick up the ball."
   elsif a_question.match?(/^plague(-| )ridden$/i)
     ""
   elsif a_question.match?(/^pogo stick$/i)
     ""
   elsif a_question.match?(/^projectile vomit$/i)
-    ""
+    "Instead of performing a Block action (on its own or as part of a Blitz action), this player may perform a 'Projectile Vomit' Special action. Exactly as described for a Block action, nominate a single Standing player to be the target of the Projectile Vomit Special action. There is no limit to how many players with this Trait may perform this Special action each team turn.\n\nTo perform a Projectile Vomit Special action, roll a D6:\n\n• On a roll of 2+, this player regurgitates acidic bile on the nominated target.\n• On a roll of 1, this player belches and snorts, before covering itself with acidic bile.\n• In either case, an Armour roll is made against the player hit by the Projectile Vomit. This Armour roll cannot be modified in any way.\n• If the armour of the player hit is not broken, this Trait has no effect.\n\nA player can only perform this Special action once per turn (i.e., Projectile Vomit cannot be used with Frenzy or Multiple Block)."
   elsif a_question.match?(/^really stupid$/i)
-    ""
+    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6, applying a +2 modifier to the dice roll if this player is currently adjacent to one or more Standing team-mates that do not have this Trait:\n\n• On a roll of 1-3, this player forgets what they are doing and their activation ends immediately. Additionally, this player loses their Tackle Zone until they are next activated.\n• On a roll of 4+, this player continues their activation as normal and completes their declared action.\n\nNote that if you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
   elsif a_question.match?(/^regeneration$/i)
-    ""
+    "After a Casualty roll has been made against this player, roll a D6. On a roll of 4+, the Casualty roll is discarded without effect and the player is placed in the Reserves box rather than the Casualty box of their team dugout. On a roll of 1-3, however, the result of the Casualty roll is applied as normal."
   elsif a_question.match?(/^right stuff$/i)
-    ""
+    "If this player also has a Strength characteristic of 3 or less, they can be thrown by a team-mate with the Throw Team-mate skill, as described on page 52."
   elsif a_question.match?(/^secret weapon$/i)
     ""
   elsif a_question.match?(/^stab$/i)
     ""
   elsif a_question.match?(/^stunty$/i)
-    ""
+    "When this player makes an Agility test in order to Dodge, they ignore any -1 modifiers for being Marked in the square they have moved into, unless they also have either the Bombardier trait, the Chainsaw trait, or the Swoop trait.\n\nHowever, when an opposition player attempts to interfere with a Pass action performed by this player, that player may apply a +1 modifier to their Agility test.\n\nFinally, players with this Trait are more prone to injury. Therefore, when an Injury roll is made against this player, roll 2D6 and consult the Stunty Injury table, on page 60."
   elsif a_question.match?(/^swarming$/i)
     ""
   elsif a_question.match?(/^swoop$/i)
     ""
   elsif a_question.match?(/^take root$/i)
-    ""
+    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6:\n\n• On a roll of 1, this player becomes 'Rooted':\n- A Rooted player cannot move from the square they currently occupy for any reason, voluntarily or otherwise, until the end of this drive, or until they are Knocked Down or Placed Prone.\n- A Rooted player may perform any action available to them provided they can do so without moving. For example, a Rooted player may perform a Pass action but may not move before making the pass, and so on.\n• On a roll of 2+, this player continues their activation as normal.\n\nIf you declared that this player would perform any action that includes movement (Pass, Hand-off, Blitz, or Foul) prior to them becoming Rooted, they may complete the action if possible. If they cannot, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
   elsif a_question.match?(/^titchy$/i)
-    ""
-  elsif a_question.match?(/^timber$/i)
-    ""
+    "This player may apply a +1 modifier to any Agility tests they make in order to Dodge. However, if an opposition player dodges into a square within the Tackle Zone of this player, this player does not count as Marking the moving player for the purposes of calculating Agility test modifiers."
+  elsif a_question.match?(/^tim+(|-)ber(|!)$/i)
+    "If this player has a Movement Allowance of 2 or less, apply a +1 modifier to the dice roll when they attempt to stand up (as described on page 44) for each Open, Standing team-mate they are currently adjacent to. A natural 1 is always a failure, no matter how many team-mates are helping."
   elsif a_question.match?(/^throw team(-| |)mate$/i)
-    ""
+    "If this player also has a Strength characteristic of 5 or more, they may perform a Throw Team-mate action, as described on page 52, allowing them to throw a team-mate with the Right Stuff trait."
   elsif a_question.match?(/^unchannelled fury$/i)
     ""
   # elsif a_question.match?(/^$/i)
