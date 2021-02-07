@@ -210,6 +210,16 @@ elsif a_question.match?(/^STRENGTH$/i)
     "If this player also has a Strength characteristic of 5 or more, they may perform a Throw Team-mate action, as described on page 52, allowing them to throw a team-mate with the Right Stuff trait."
   elsif a_question.match?(/^unchannelled fury$/i)
     ""
+  
+  # OTHER
+  elsif a_question.match?(/^injury$/i)
+    "2-7 Stunned: the player immediately becomes Stunned, as described on page 27, and is laid face-down on the pitch.\n\n 8-9 KO'd: the player is immediately removed from play and placed in the Knocked-out box of their team dugout. At the end of each drive, there is a chance any Knocked-out players will recover, as described on page 66.\n\n10+ Casualty!: the player becomes a casualty and is immediately removed from play and placed in the Casualty box of their team dugout. The coach of the opposing team immediately makes a Casulaty roll, as described on page 61."
+  elsif a_question.match?(/^stunty injury$/i)
+    "2-6 Stunned: the player immediately becomes Stunned, as described on page 27, and is laid face-down on the pitch.\n\n 7-8 KO'd: the player is immediately removed from play and placed in the Knocked-out box of their team dugout. At the end of each drive, there is a chance any Knocked-out players will recover, as described on page 66.\n\n9 Badly Hurt: the player becomes a casualty and is immediately removed from play and placed in the Casualty box of their team dugout. No Casualty roll is made. Instead, a Badly Hurt result is automatically applied against them.\n\n10+ Casualty!: the player becomes a casualty and is immediately removed from play and placed in the Casualty box of their team dugout. The coach of the opposing team immediately makes a Casulaty roll, as described on page 61."
+  elsif a_question.match?(/^casualty$/i)
+    "1-6 Badly Hurt: the player misses the rest of this game, but suffers no long-term effect.\n\n7-9 Seriously Hurt: MNG\n\n10-12 Serious Injury: NI and MNG\n\n13-14 Lasting Injury: Characteristic reduction and MNG\n\n15-16 DEAD: this player is far too dead to play Blood Bowl!"
+  elsif a_question.match?(/^lasting injury$/i)
+    "1-2 Head Injury: -1 AV\n\n3 Smashed Knee: -1 MA\n\n4 Broken Arm: -1 PA\n\n5 Neck Injury: -1 AG\n\n6 Dislocated Shoulder: -1 ST"
   # elsif a_question.match?(/^$/i)
   #   ""
   # elsif a_question.match?(/^$/i)
