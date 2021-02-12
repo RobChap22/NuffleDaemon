@@ -191,15 +191,15 @@ elsif a_question.match?(/^STRENGTH$/i)
   elsif a_question.match?(/^right stuff$/i)
     "If this player also has a Strength characteristic of 3 or less, they can be thrown by a team-mate with the Throw Team-mate skill, as described on page 52."
   elsif a_question.match?(/^secret weapon$/i)
-    ""
+    "When a drive in which this player took part in ends, even if the player was not on the pitch at the end of the drive, this player will be Sent-off for commiting a Foul, as described on page 63."
   elsif a_question.match?(/^stab$/i)
-    ""
+    "Instead of performing a Block action (on its own or as part of a Blitz action), this player may perform a 'Stab' Special action. Exactly as described for a Block action, nominate a single Standing player to be the target of the Stab Special action. There is no limit to how many players with this Trait may perform this Special action per team turn.\n\nTo perform a Stab Special action, make an unmodified Armour roll against the target:\n\n• If the armour of the player hit is broken, they become Prone and an Injury roll is made against them. This Injury roll cannot be modified in any way.\n• If the armour of the player hit is not broken, this Trait has no effect.\n• If Stab is used as part of a Blitz action, the player cannot continue moving after using it."
   elsif a_question.match?(/^stunty$/i)
     "When this player makes an Agility test in order to Dodge, they ignore any -1 modifiers for being Marked in the square they have moved into, unless they also have either the Bombardier trait, the Chainsaw trait, or the Swoop trait.\n\nHowever, when an opposition player attempts to interfere with a Pass action performed by this player, that player may apply a +1 modifier to their Agility test.\n\nFinally, players with this Trait are more prone to injury. Therefore, when an Injury roll is made against this player, roll 2D6 and consult the Stunty Injury table, on page 60."
   elsif a_question.match?(/^swarming$/i)
-    ""
+    "During each Start of Drive sequence, after Step 2 but before Step 3, you may remove D3 players with this Trait from the Reserves box of your dugout and set them up on the pitch, allowing you to set up more than the usual 11 players. These extra players may not be placed on the Line of Scrimmage or in a Wide Zone."
   elsif a_question.match?(/^swoop$/i)
-    ""
+    "If this player is thrown by a team-mate, as described on page 52, they do not scatter before landing as they normally would. Instead, you may place the Throw-in template over the player, facing towards either End Zone or either sideline as you wish. The player then moves from the target square D3 squares in a direction determined by rolling a D6 and referring to the Throw-in template."
   elsif a_question.match?(/^take root$/i)
     "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6:\n\n• On a roll of 1, this player becomes 'Rooted':\n- A Rooted player cannot move from the square they currently occupy for any reason, voluntarily or otherwise, until the end of this drive, or until they are Knocked Down or Placed Prone.\n- A Rooted player may perform any action available to them provided they can do so without moving. For example, a Rooted player may perform a Pass action but may not move before making the pass, and so on.\n• On a roll of 2+, this player continues their activation as normal.\n\nIf you declared that this player would perform any action that includes movement (Pass, Hand-off, Blitz, or Foul) prior to them becoming Rooted, they may complete the action if possible. If they cannot, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
   elsif a_question.match?(/^titchy$/i)
@@ -209,7 +209,7 @@ elsif a_question.match?(/^STRENGTH$/i)
   elsif a_question.match?(/^throw team(-| |)mate$/i)
     "If this player also has a Strength characteristic of 5 or more, they may perform a Throw Team-mate action, as described on page 52, allowing them to throw a team-mate with the Right Stuff trait."
   elsif a_question.match?(/^unchannelled fury$/i)
-    ""
+    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6, applying a +2 modifier to the die roll if you declared the player would perform a Block or Blitz action (or a Special action granted by a Skill or Trait that can be performed instead of a Block action).\n\n• On a roll of 1-3, this player rages incoherently at others but achieves little else. Their activation ends immediately.\n• On a roll of 4+, this player continues their action as normal and completes their declared action.\n\nIf you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
   
   # OTHER
   elsif a_question.match?(/^injury$/i)
