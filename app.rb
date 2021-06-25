@@ -47,7 +47,7 @@ def bot_answer_to(a_question, user_name)
   # General
   elsif a_question.match?(/^GENERAL$/i)
     "A1: Block\nA2: Dauntless\nA3: Dirty Player\nA4: Fend\nA5: Frenzy\nA6: Kick\nB1: Pro\nB2: Shadowing\nB3: Strip Ball\nB4: Sure Hands\nB5: Tackle\nB6: Wrestle"
-  elsif a_question.match?(/^[block|ブロック|ブロク]$/i)
+  elsif a_question.match?(/^block|ブロック|ブロク$/i)
     "When a Both Down result is applied during a Block action, this player may choose to ignore it and not get Knocked Down, as described on page 57.\n\nブロックアクションの時、「ボースダウン」の結果が出た場合、５７ページに説明されているようにこのプレイヤーはその結果を無視してノックダウンされないことを選べます。"
   elsif a_question.match?(/^dauntless$/i)
     "When this player performs a Block action (on its own or as part of a Blitz action), if the nominated target has a higher Strength characteristic than this player before counting offensive or defensive assists but after applying any other modifiers, roll a D6 and add this player's Strength characteristic to the result. If the total is higher than the target\'s Strength characteristic, this player increases their Strength characteristic to be equal to that of the target of the Block action, before counting offensive or defensive assists, for the duration of this Block action.\n\nIf this player has another Skill that allows them to perform more than one Block action, such as Frenzy, they must make a Dauntless roll before each separate Block action is performed."
