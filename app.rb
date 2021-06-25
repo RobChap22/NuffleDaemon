@@ -20,30 +20,30 @@ def bot_answer_to(a_question, user_name)
   # Agility
   if a_question.match?(/^AGILITY$/i)
     "A1: Catch\nA2: Diving Catch\nA3: Diving Tackle\nA4: Dodge\nA5: Defensive\nA6: Jump Up\nB1: Leap\nB2: Safe Pair of Hands\nB3: Sidestep\nB4: Sneaky Git\nB5: Sprint\nB6: Sure Feet"
-  elsif a_question.match?(/^catch$/i)
-    "This player may re-roll a failed agility test when attempting to catch the ball."
-  elsif a_question.match?(/^diving catch$/i)
-    "This player may attempt to catch the ball if a pass, throw-in, or kick off causes it to land in a square within their Tackle Zone after scattering or deviating. This skill does not allow this player to attempt to catch the ball if it bounces into a square within their Tackle Zone.\n\nAdditionally, this player may apply a +1 modifier to any attempt to catch an accurate pass if they occupy the targeted square."
-  elsif a_question.match?(/^diving tackle$/i)
-    "Should an active opposition player that is attempting to Dodge, Jump, or Leap in order to vacate a square in which they are being Marked by this player pass their Agility test, you may declare that this player will use this Skill. Your opponent must immediately subtract 2 from the result of the Agility test. This player is then Placed Prone in the square vacated by the opposition player.\n\nIf the opposition player was being Marked by more than one player with this Skill, only one player may use it."
-  elsif a_question.match?(/^dodge$/i)
-    "Once per team turn, during their activation, this player may re-roll a failed Agility test when attempting to Dodge.\n\nAdditionally, this player may choose to use this skill when they are the target of a Block action and a Stumble result is applied against them, as described on page 57."
-  elsif a_question.match?(/^defensive$/i)
-    "During your opponent\'s team turn (but not during your own team turn), any opposition players being Marked by this player cannot use the Guard skill."
-  elsif a_question.match?(/^jump up$/i)
-    "If this player is Prone they may stand up for free (i.e., standing up does not cost this player three (3) squares of Movement Allowance, as it normally would).\n\nAdditionally, if this player is Prone when activated, they may attempt to Jump Up and perform a Block action. This player makes an Agility test, applying a +1 modifier. If this test is passed, they stand up and may perform a Block action. If the test is failed, they remain Prone and their activation ends."
-  elsif a_question.match?(/^leap$/i)
-    "During their movement, instead of jumping over a single square that is occupied by a Prone or Stunned player, as described on page 45, a player with this Skill may choose to Leap over any single adjacent square, including unoccupied squares and squares occupied by Standing players.\n\nAdditionally, this player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player, or to Leap over an empty square or a square occupied by a Standing player by 1, to a minimum of -1.\n\nA player with this Skill cannot also have the Pogo Stick trait."
-  elsif a_question.match?(/^safe pair of hands$/i)
-    "If this player is Knocked Down or Placed Prone (but not if they Fall Over) whilst in possession of the ball, the ball does not bounce. Instead, you may place the ball in an unoccupied square adjacent to the one this player occupies when they become Prone."
-  elsif a_question.match?(/^sidestep$/i)
-    "If this player is pushed back for any reason, they are not moved into a square chosen by the opposing coach. Instead, you may choose any unoccupied square adjacent to this player. This player is pushed back into that square instead. If there are no unoccupied squares adjacent to this player, this Skill cannot be used."
-  elsif a_question.match?(/^sneaky git$/i)
-    "When this player performs a Foul action, they are not Sent-off for committing a Foul should they roll a natural double on the Armour roll.\n\nAdditionally, the activation of this player does not have to end once the foul has been committed. If you wish and if this player has not used their full Movement Allowance, they may continue to move after committing the Foul."
-  elsif a_question.match?(/^sprint$/i)
-    "When this player performs any action that includes movement, they may attempt to Rush three times, rather than the usual two."
-  elsif a_question.match?(/^sure feet$/i)
-    "Once per team turn, during their activation, this player may re-roll the D6 when attempting to Rush."
+  elsif a_question.match?(/^catch|キャッチ$/i)
+    "This player may re-roll a failed agility test when attempting to catch the ball.\n\nボールのキャッチを試みる時、失敗したアジリティ（AG)テストをリロールができます。"
+  elsif a_question.match?(/^diving catch|ダイビングキャッチ$/i)
+    "This player may attempt to catch the ball if a pass, throw-in, or kick off causes it to land in a square within their Tackle Zone after scattering or deviating. This skill does not allow this player to attempt to catch the ball if it bounces into a square within their Tackle Zone.\n\nAdditionally, this player may apply a +1 modifier to any attempt to catch an accurate pass if they occupy the targeted square.\n\nもしパスかスローインかキックオフがスキャターやディビエションの後、このプレイヤーのタックルゾーンに着地する場合、このプレイヤーはキャッチを試みられます。もしボールがバウンスでタックルゾーンに入ったとしても、このスキルがキャッチを試みる事を強制することはありません。\n加えて、もしこのプレイヤーがターゲットスクエアに居れば、アキュレートパスのキャッチを試みる時、＋１モディファイアを得ます。"
+  elsif a_question.match?(/^diving tackle|ダイビングタックル$/i)
+    "Should an active opposition player that is attempting to Dodge, Jump, or Leap in order to vacate a square in which they are being Marked by this player pass their Agility test, you may declare that this player will use this Skill. Your opponent must immediately subtract 2 from the result of the Agility test. This player is then Placed Prone in the square vacated by the opposition player.\n\nIf the opposition player was being Marked by more than one player with this Skill, only one player may use it.\n\nもしアクティブの敵プレイヤーがこのプレイヤーにマークされているスクエアからドッジ、ジャンプ、リープで離れる事を試みて、アジリティ（AG)テストに成功した場合、このプレイヤーはこのスキルの使用を宣言出来ます。敵プレイヤーはすぐにそのアジリティ（AG)テストの結果をー２します。加えて、このプレイヤーは敵プレイヤーが出たスクエアに「プローンとして配置」されます。\nもしこのスキルを持つプレイヤーが２人以上で敵プレイヤーをマークしている場合、そのうち１人だけがダイビングタックルを使用出来ます。"
+  elsif a_question.match?(/^dodge|ドッジ$/i)
+    "Once per team turn, during their activation, this player may re-roll a failed Agility test when attempting to Dodge.\n\nAdditionally, this player may choose to use this skill when they are the target of a Block action and a Stumble result is applied against them, as described on page 57.\n\nチームターンの自分のアクティベーション中一回だけ、ドッジを試み、アジリティ（AG)テストに失敗した時リロールできます。\nさらに、このプレイヤーがブロックされてスタンブルの結果が出た時、５７ページに説明されているようにこのスキルが使えます。"
+  elsif a_question.match?(/^defensive|ディフェンシブ$/i)
+    "During your opponent\'s team turn (but not during your own team turn), any opposition players being Marked by this player cannot use the Guard skill.\n\n敵チームターンの間（でも自分のターンの間では無い）に、このプレイヤーにマークされているプレイヤーは「ガード」のスキルが使えません。"
+  elsif a_question.match?(/^jump up|ジャンプアップ$/i)
+    "If this player is Prone they may stand up for free (i.e., standing up does not cost this player three (3) squares of Movement Allowance, as it normally would).\n\nAdditionally, if this player is Prone when activated, they may attempt to Jump Up and perform a Block action. This player makes an Agility test, applying a +1 modifier. If this test is passed, they stand up and may perform a Block action. If the test is failed, they remain Prone and their activation ends.\n\nもしこのプレイヤーがプローンの時、フリーで立ち上がれます。（つまり立ち上がるために通常ならば必要なムーブメントアロウランス（MA)３が要りません）\n加えて、もしアクティベートする時にこのプレイヤーはプローンであれば、ブロックアクションを行うために「ジャンプアップ」を試みられます。このプレイヤーはアジリティ（AG)テストを行い、それに＋１モディファイアを当てはめます。テストに成功した場合、立ち上がり、ブロックアクションができます。失敗した場合プローンしたままアクティベーションが終わります。"
+  elsif a_question.match?(/^leap|リープ$/i)
+    "During their movement, instead of jumping over a single square that is occupied by a Prone or Stunned player, as described on page 45, a player with this Skill may choose to Leap over any single adjacent square, including unoccupied squares and squares occupied by Standing players.\n\nAdditionally, this player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player, or to Leap over an empty square or a square occupied by a Standing player by 1, to a minimum of -1.\n\nA player with this Skill cannot also have the Pogo Stick trait.\n\n自分の移動の間、４５ページに説明されているようにプローンやスタンしているプレイヤーがいるスクエアの上をジャンプする代わりに、このスキルを持っているプレイヤーは、それが空きスクエアでも立っているプレイヤーが占有しているスクエアでも、隣のスクエアの上をリープする事が出来ます。\n加えて、プローンやスタンしているプレイヤーがいるスクエアの上をジャンプする時、あるいは空きスクエアや立っているプレイヤーが占有しているスクエアの上をリープする時、アジリティ（AG)テストのネガティブなモディファイアを１減少させることが出来ます。最少値は－１です。\nこのスキルを持っているプレイヤーは「ポゴ・スティック」のトレートを持つことが出来ません。"
+  elsif a_question.match?(/^safe pair of hands|セーフペアオブハンズ$/i)
+    "If this player is Knocked Down or Placed Prone (but not if they Fall Over) whilst in possession of the ball, the ball does not bounce. Instead, you may place the ball in an unoccupied square adjacent to the one this player occupies when they become Prone.\n\nもしこのプレイヤーがボールを持ちながら、ノックダウンするか、プローンとして配置される時、（でも転ぶ時ではない）ボールはバウンスしません。代わりにこのプレイヤーがプローンとして置かれるスクエアの隣の空きスクエアにボールを置くことができます。"
+  elsif a_question.match?(/^sidestep|サイドステップ$/i)
+    "If this player is pushed back for any reason, they are not moved into a square chosen by the opposing coach. Instead, you may choose any unoccupied square adjacent to this player. This player is pushed back into that square instead. If there are no unoccupied squares adjacent to this player, this Skill cannot be used.\n\nもしこのプレイヤーが様々な理由でプッシュバックされる時、相手のコーチが選ぶスクエアに押される代わりに自分で隣接する空きスクエアを選び、移動することが出来ます。このプレイヤーの隣に空きスクエアがないとき、このスキルは使用出来ません。"
+  elsif a_question.match?(/^sneaky git|スニーキギット$/i)
+    "When this player performs a Foul action, they are not Sent-off for committing a Foul should they roll a natural double on the Armour roll.\n\nAdditionally, the activation of this player does not have to end once the foul has been committed. If you wish and if this player has not used their full Movement Allowance, they may continue to move after committing the Foul.\n\nこのプレイヤーがファールを犯す時、もしアーマーロールの出目がナチュラルなゾロ目だった場合でも退場させられません。\nさらに、ファールを犯した後このプレイヤーのアクティベーションを終了させなくても構いません。もし望むのであれば、そしてこのプレイヤーがムーブメントアロウランス（MA)をまだ残しているのであれば、ファールを犯したあとで移動を続ける事が出来ます。"
+  elsif a_question.match?(/^sprint|スプリント$/i)
+    "When this player performs any action that includes movement, they may attempt to Rush three times, rather than the usual two.\n\nこのプレイヤーは移動が含まれるアクションを行う時、ラッシュをいつもの2回までではなく3回まで試みることができます。"
+  elsif a_question.match?(/^sure feet|シュアフィート$/i)
+    "Once per team turn, during their activation, this player may re-roll the D6 when attempting to Rush.\n\nチームターンのアクティベーション中、一回だけ、このプレイヤーはラッシュを試みる時、ラッシュのD6をリロールすることができます。"
   # General
   elsif a_question.match?(/^GENERAL$/i)
     "A1: Block\nA2: Dauntless\nA3: Dirty Player\nA4: Fend\nA5: Frenzy\nA6: Kick\nB1: Pro\nB2: Shadowing\nB3: Strip Ball\nB4: Sure Hands\nB5: Tackle\nB6: Wrestle"
