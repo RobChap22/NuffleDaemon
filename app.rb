@@ -155,7 +155,7 @@ elsif a_question.match?(/^STRENGTH$/i)
 
   # TRAITS
   elsif a_question.match?(/^animal savagery$/i)
-    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6, applying a +2 modifier to the die roll if you declared the player would perform a Block or Blitz action (or a Special action granted by a Skill or Trait that can be performed instead of a Block action):\n\n• On a roll of 1-3, this player lashes out at their team-mates:\n- One standing team-mate of your choice that is currently adjacent to this player is immediately Knocked Down by this player. This does not cause a Turnover unless the Knocked Down player was in possession of the ball. After making an Armour roll (and possible Injury roll) against the Knocked Down player, this player may continue their activation and complete their declared action if able. Note that, if this player has any applicable Skills, the coach of the opposing team may use them when making an Armour roll (and possible Injury roll) against the Knocked Down player.\n- If this player is not currently adjacent to any Standing Team-mates, this player's activation ends immediately. Additionally, this player loses their Tackle Zone until they are next activated.\n• On a roll of 4+, this player continues their activation as normal and completes their declared action.\n\nIf you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
+    "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6, applying a +2 modifier to the die roll if you declared the player would perform a Block or Blitz action (or a Special action granted by a Skill or Trait that can be performed instead of a Block action):\n\n• On a roll of 1-3, this player lashes out at their team-mates:\n- One standing team-mate of your choice that is currently adjacent to this player is immediately Knocked Down by this player. This does not cause a Turnover unless the Knocked Down player was in possession of the ball. After making an Armour roll (and possible Injury roll) against the Knocked Down player, this player may continue their activation and complete their declared action if able. Note that, if this player has any applicable Skills, the coach of the opposing team may use them when making an Armour roll (and possible Injury roll) against the Knocked Down player.\n- If this player is not currently adjacent to any Standing Team-mates, this player's activation ends immediately. Additionally, this player loses their Tackle Zone until they are next activated.\n• On a roll of 4+, this player continues their activation as normal and completes their declared action.\n\nIf you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn.\n\nアニマルサヴァジリー"
   elsif a_question.match?(/^animosity$/i)
     "This player is jealous of and dislikes certain other players on their team, as shown in brackets after the name of the Skill on this player's profile. This may be defined by position or race. For example, a Skaven Thrower on an Underworld Denizens team has Animpsity (Underworld Goblin Linemen), meaning they suffer Animosity towards any Underworld Goblin Linemen on their team. Whereas a Skaven Renegade on a Chaos Renegade team has Animosity (all team-mates), meaning they suffer Animosity towards all of their team-mates equally.\n\nWhen this player wishes to perform a Hand-off action to a team-mate of the type listed, or attempts to perform a Pass action and the target square is occupied by a team-mate of the type listed, this player may refuse to do so. Roll a D6. On a roll of 1, this player refuses to perform the action and their activation comes to an end. Animosity does not extend to Mercenaries or Star Players."
   elsif a_question.match?(/^always hungry$/i)
@@ -210,7 +210,39 @@ elsif a_question.match?(/^STRENGTH$/i)
     "If this player also has a Strength characteristic of 5 or more, they may perform a Throw Team-mate action, as described on page 52, allowing them to throw a team-mate with the Right Stuff trait."
   elsif a_question.match?(/^unchannelled fury$/i)
     "When this player is activated, even if they are Prone or have lost their Tackle Zone, immediately after declaring the action they will perform but before performing the action, roll a D6, applying a +2 modifier to the die roll if you declared the player would perform a Block or Blitz action (or a Special action granted by a Skill or Trait that can be performed instead of a Block action).\n\n• On a roll of 1-3, this player rages incoherently at others but achieves little else. Their activation ends immediately.\n• On a roll of 4+, this player continues their action as normal and completes their declared action.\n\nIf you declared that this player would perform an action which can only be performed once per team turn and this player's activation ended before the action could be completed, the action is considered to have been performed and no other player on your team may perform the same action this team turn."
-  
+  # Japanese Traits
+  elsif a_question.match?(/^アニマルサヴァジリー$/i)
+    "このプレイヤーがアクティベートする時、もしプローンであったりタックルゾーンを失っていても、行いたいアクションを宣言して実際に行う前にD6を振ります。もしブロックアクションかブリッツアクション（又はスキルやトレートで得たブロックの代わりの特別なアクションでも）を宣言した場合は＋２モディファイアをそのロールに当てはめます。\n・出目１～３の場合、このプレイヤーはチームメイトに食ってかかる：\n－このプレイヤーの隣に立っているチームメイトを一人選び、そのプレイヤーがこのプレイヤーによってノックダウンされます。そのプレイヤーがボールを持っていなければターンオーバーになりません。ノックダウンされたプレイヤーに対してアーマーロール（そして可能であればインジャリーロールも）を行ってからこのプレイヤーのアクティベーションを継続し、可能であれば宣言したアクションを行います。このプレイヤーが使用可能なスキルを持っていれば、敵チームのコーチはノックダウンされたプレイヤーに対するアーマーロール（そして可能ならばインジャリーロールも）をする時、そのスキルを使うことが出来ます。\n－もし現在このプレイヤーの隣に立っているチームメイトがいない場合、このプレイヤーのアクティベーションがすぐ終わります。さらに、このプレイヤーは次のアクティベーションまでタックルゾーンを失います。\n・４＋の場合、このプレイヤーは通常通りアクティベーションを継続し、宣言したアクションを行います。\n\nもしこのプレイヤーがターン中一回しか行えないアクションを宣言し、そのアクションを行う前にこのプレイヤーのアクティベーションが終わったら、そのアクションは行われたことになり、自分のチームの他のプレイヤーはこのチームターンにそのアクションが行えません。\n\nANIMAL SAVAGERY"
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+    # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
   # OTHER
   elsif a_question.match?(/^injury$/i)
     "2-7 Stunned: the player immediately becomes Stunned, as described on page 27, and is laid face-down on the pitch.\n\n 8-9 KO'd: the player is immediately removed from play and placed in the Knocked-out box of their team dugout. At the end of each drive, there is a chance any Knocked-out players will recover, as described on page 66.\n\n10+ Casualty!: the player becomes a casualty and is immediately removed from play and placed in the Casualty box of their team dugout. The coach of the opposing team immediately makes a Casualty roll, as described on page 61."
@@ -230,7 +262,7 @@ elsif a_question.match?(/^STRENGTH$/i)
   #   ""
   
   else
-    ["Wot?", "Huh?", "You wot?", "Zug-zug!", "Not 'eard of that.", "I'm just a simple daemon, sir, please be more clear."].sample
+    ["Wot?", "Huh?", "You wot?", "Zug-zug!", "Not 'eard of that one.", "I'm just a simple daemon, sir, please be more clear."].sample
   end
 end
 
