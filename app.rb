@@ -74,30 +74,30 @@ def bot_answer_to(a_question, user_name)
   # Mutations
   elsif a_question.match?(/^MUTATION(S|)$/i)
     "A1: Big Hand\nA2: Claws\nA3: Disturbing Presence\nA4: Extra Arms\nA5: Foul Appearance\nA6: Horns\nB1: Iron Hard Skin\nB2: Monstrous Mouth\nB3: Prehensile Tail\nB4: Tentacles\nB5: Two Heads\nB6: Very Long Legs"
-  elsif a_question.match?(/^big hand$/i)
-    "This player may ignore any modifier(s) for being Marked or for Pouring Rain weather conditions when they attempt to pick up the ball."
-  elsif a_question.match?(/^claws$/i)
-    "When you make an Armour roll against an opposition player that was Knocked Down as the result of a Block action performed by this player, a roll of 8+ before applying any modifiers will break their armour, regardless of their actual Armour Value."
-  elsif a_question.match?(/^disturbing presence$/i)
-    "When an opposition player performs either a Pass action, a Throw Team-mate action, or a Throw Bomb Special action, or attempts to either interfere with a pass or to catch the ball, they must apply a -1 modifier to the test for each player on your team with this Skill that is within three squares of them, even if the player with this Skill is Prone, Stunned, or has lost their Tackle Zone."
-  elsif a_question.match?(/^extra arms$/i)
-    "This player may apply a +1 modifier when they attempt to pick up or catch the ball, or when they attempt to interfere with a pass."
-  elsif a_question.match?(/^foul appearance$/i)
-    "When an opposition player declares a Block action targeting this player (on its own or as part of a Blitz action), or any Special action that targets this player, their coach must first roll a D6, even if this player has lost their Tackle Zone. On a roll of 1, the player cannot perform the declared action and the action is wasted."
-  elsif a_question.match?(/^horns$/i)
-    "When this player performs a Block action as part of a Blitz action (but not on its own), you may apply a +1 modifier to this player\'s Strength characteristic. This modifier is applied before counting assists, before applying any other Strength modifiers, and before using any other Skills or Traits."
-  elsif a_question.match?(/^iron hard skin$/i)
-    "The Claws skill cannot be used when making an Armour roll against this player."
-  elsif a_question.match?(/^monstrous mouth$/i)
-    "This player may re-roll any failed attempt to catch the ball. In addition, the Strip Ball skill cannot be used against this player."
-  elsif a_question.match?(/^prehensile tail$/i)
-    "When an active opposition player attempts to Dodge, Jump, or Leap in order to vacate a square in which they are being Marked by this player, there is an additional -1 modifier applied to the active player\'s Agility test.\n\nIf the opposition player is being Marked by more than one player with this Mutation, only one player may use it."
-  elsif a_question.match?(/^tentacles$/i)
-    "This player can use this Skill when an opposition player they are Marking voluntarily moves out of a square within this player\'s Tackle Zone. Roll a D6, adding the ST of this player to the roll and then subtracting the ST of the opposition player. If the result is 6 or higher, or if the roll is a natural 6, the opposition player is held firmly in place and their movement comes to an end. If, however, the result is 5 or lower, or if the roll is a natural 1, this Skill has no further effect.\n\nA player may use this Skill any number of times per turn, during either team's turn. If an opposition player is being Marked by more than one player with this Skill, only one player may use it."
-  elsif a_question.match?(/^two heads$/i)
-    "This player may apply a +1 modifier to the Agility test when they attempt to Dodge."
-  elsif a_question.match?(/^very long legs$/i)
-    "This player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player (or to Leap over an empty square or a square occupied by a Standing player, if this player has the Leap skill) by 1, to a minimum of -1.\n\nAdditionally, this player may apply a +2 modifier to any attempts to interfere with a pass they make.\n\nFinally, this player ignores the Cloud Burster skill."
+  elsif a_question.match?(/^big hand|ビッグハンド$/i)
+    "This player may ignore any modifier(s) for being Marked or for Pouring Rain weather conditions when they attempt to pick up the ball.\n\nこのプレイヤーはボールを拾う時、天候表の「土砂降り」の効果と、マークによるネガティブモディファイアを無視することができます。"
+  elsif a_question.match?(/^claws|クローズ$/i)
+    "When you make an Armour roll against an opposition player that was Knocked Down as the result of a Block action performed by this player, a roll of 8+ before applying any modifiers will break their armour, regardless of their actual Armour Value.\n\nこのプレイヤーがブロックアクションを行って敵プレイヤーをノックダウンさせ、アーマーロールする時、敵プレイヤーのアーマーバリュー（AM)に関係なく、あらゆるモディファイアを当てはめる前に８＋を振れば、アーマーはブロークンになります。"
+  elsif a_question.match?(/^disturbing presence|ディスタービンプレセンス$/i)
+    "When an opposition player performs either a Pass action, a Throw Team-mate action, or a Throw Bomb Special action, or attempts to either interfere with a pass or to catch the ball, they must apply a -1 modifier to the test for each player on your team with this Skill that is within three squares of them, even if the player with this Skill is Prone, Stunned, or has lost their Tackle Zone.\n\n敵プレイヤーは、パスアクションやスローチームメイトアクション、「スローボム」の特別なアクションを行う時や、パスの妨害を試みる時、ボールのキャッチを試みる時, ３スクエア内に居る、このスキルを持つあなたのチームのプレイヤー１人毎に、それらのテストに－１モディファイアを受けます。\nあなたのプレイヤーがプローンやスタンしていたり、タックルゾーンを失っていてもこのスキルは効果を発揮します。"
+  elsif a_question.match?(/^extra arms|エキストラアームズ$/i)
+    "This player may apply a +1 modifier when they attempt to pick up or catch the ball, or when they attempt to interfere with a pass.\n\nこのプレイヤーは、ボールを拾おうとする時、キャッチしようとする時、パスを妨害しようとする時、＋１モディファイアを当てはめることができます。"
+  elsif a_question.match?(/^foul appearance|ファールアピアランス$/i)
+    "When an opposition player declares a Block action targeting this player (on its own or as part of a Blitz action), or any Special action that targets this player, their coach must first roll a D6, even if this player has lost their Tackle Zone. On a roll of 1, the player cannot perform the declared action and the action is wasted.\n\n敵プレイヤーがブロックアクション（ブロックだけでも、ブリッツアクションに含まれる時も）、又は特別なアクションでこのプレイヤーをターゲットとして指名する時、このプレイヤーがタックルゾーンを失っていても、敵プレイヤーのコーチは最初にD6を振らなくてはなりません。出目１の場合、敵プレイヤーは宣言したアクションが行えず、そのアクションは無駄になります。"
+  elsif a_question.match?(/^horns|ホーンズ$/i)
+    "When this player performs a Block action as part of a Blitz action (but not on its own), you may apply a +1 modifier to this player\'s Strength characteristic. This modifier is applied before counting assists, before applying any other Strength modifiers, and before using any other Skills or Traits.\n\nこのプレイヤーはブリッツアクションに含まれるブロックアクション（しかしブロックアクションだけの場合は含まれない）を行う時、このプレイヤーのストレングス（ST)に＋１モディファイアを当てはめることができます。アシストや、他のストレングス（ST)モディファイアを当てはめる前、あるいは他のスキルやトレートを使う前に、このモディファイアを当てはめます。"
+  elsif a_question.match?(/^iron hard skin|アイアンハードスキン$/i)
+    "The Claws skill cannot be used when making an Armour roll against this player.\n\nこのプレイヤーに対してアーマーロールをする時、「クローズ」スキルは使えません。"
+  elsif a_question.match?(/^monstrous mouth|モンスチュラスマウス$/i)
+    "This player may re-roll any failed attempt to catch the ball. In addition, the Strip Ball skill cannot be used against this player.\n\nこのプレイヤーがボールのキャッチに失敗した時、リロールができます。さらにこのプレイヤーに対して「ストリップボール」スキルは使えません。"
+  elsif a_question.match?(/^prehensile tail|プリヘンサイルテール$/i)
+    "When an active opposition player attempts to Dodge, Jump, or Leap in order to vacate a square in which they are being Marked by this player, there is an additional -1 modifier applied to the active player\'s Agility test.\n\nIf the opposition player is being Marked by more than one player with this Mutation, only one player may use it.\n\nもしアクティブの敵プレイヤーがこのプレイヤーにマークされているスクエアからドッジ、ジャンプ、又はリープで離れようとする時、アクティブプレイヤーのアジリティ（AG)テストに追加でー１モディファイアを当てはめます。\nもしこのスキルを持つプレイヤーが２人以上で敵プレイヤーをマークしている場合そのうち１人だけが、プリヘンサイルテールを使用出来ます。"
+  elsif a_question.match?(/^tentacles|テンタクルズ$/i)
+    "This player can use this Skill when an opposition player they are Marking voluntarily moves out of a square within this player\'s Tackle Zone. Roll a D6, adding the ST of this player to the roll and then subtracting the ST of the opposition player. If the result is 6 or higher, or if the roll is a natural 6, the opposition player is held firmly in place and their movement comes to an end. If, however, the result is 5 or lower, or if the roll is a natural 1, this Skill has no further effect.\n\nA player may use this Skill any number of times per turn, during either team's turn. If an opposition player is being Marked by more than one player with this Skill, only one player may use it.\n\nこのプレイヤーがマークしている敵プレイヤーは、このプレイヤーのタックルゾーン内のスクエアから意図的に離れる時、このプレイヤーはこのスキルを使うことができます。D6を振り、その結果にこのプレイヤーのストレングス（ST）を加え、敵プレイヤーのストレングス（ST）を引きます。もし結果が6以上、あるいは出目がナチュラル６の場合、敵のプレイヤーは強固に握られ、移動が終了します。しかし結果が5以下、あるいは出目がナチュラル１の場合このスキルはこれ以上効果がありません。\nプレイヤーはこのスキルをどのチームのターンでも、そして何回でも使えます。もしこのスキルを持つプレイヤーが２人以上で敵プレイヤーをマークしている場合そのうち１人だけが、テンタクルズを使用出来ます。"
+  elsif a_question.match?(/^two heads|ツーヘッヅ$/i)
+    "This player may apply a +1 modifier to the Agility test when they attempt to Dodge.\n\nドッジをする際のアジリティ（AG)テストに＋１モディファイアを当てはめることが出来ます。"
+  elsif a_question.match?(/^very long legs|ベリーロングレッグス$/i)
+    "This player may reduce any negative modifier applied to the Agility test when they attempt to Jump over a Prone or Stunned player (or to Leap over an empty square or a square occupied by a Standing player, if this player has the Leap skill) by 1, to a minimum of -1.\n\nAdditionally, this player may apply a +2 modifier to any attempts to interfere with a pass they make.\n\nFinally, this player ignores the Cloud Burster skill.\n\nこのプレイヤーがプローンやスタンしているプレイヤーがいるスクエアの上をジャンプする時（もしこのプレイヤーがリープスキルを持っていて、空きスクエアや立っているプレイヤーが占有しているスクエアの上をリープする時も）アジリティ（AG)テストのネガティブなモディファイアを１減少させることが出来ます。最少値は－１です。\nさらに、パスの妨害をする時、このプレイヤーは＋２モディファイアを当てはめることができます。\n最後に、このプレイヤーは「クラウドバースター」スキルを無視します。"
   # Passing
   elsif a_question.match?(/^PASSING$/i)
     "A1: Accurate\nA2: Cannoneer\nA3: Cloud Burster\nA4: Dump-off\nA5: Fumblerooskie\nA6: Hail Mary Pass\nB1: Leader\nB2: Nerves of Steel\nB3: On the Ball\nB4: Pass\nB5: Running Pass\nB6: Safe Pass"
