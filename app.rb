@@ -249,6 +249,32 @@ elsif a_question.match?(/^STRENGTH$/i)
   elsif a_question.match?(/^アンチャンネルドフューリ$/i)
     "このプレイヤーをアクティベートするとき、プローンしたりタックルゾーンを失っていても、アクションを宣言し、実際に行う前にD6を振ります。ブロック又はブリッツアクション（又はスキルやトレートで得たブロックの代わりの特別なアクションでも）を宣言した場合、このロールに２＋モディファイアを当てはめることができます：\n・出目が１～３の場合：このプレイヤーは他の連中に対しめちゃくちゃな怒りをぶちまけますが、それ以外大したことはしません。このプレイヤーのアクティベーションは直ちに終わります。\n・出目が４＋場合：このプレイヤーは通常通りアクティベーションを継続し、宣言したアクションを行います。\nもしこのプレイヤーがターン中一回しか行えないアクションを宣言し、そのアクションを行う前にこのプレイヤーのアクティベーションが終わったら、そのアクションは行われたことになり、自分のチームの他のプレイヤーはこのチームターン中にそのアクションが行えません。\n\nUNCHANELLED FURY"
 
+  # INDUCEMENTS
+  elsif a_question.match?(/^inducements$/i)
+    "0-4 Temp Agency Cheerleaders – 20,000 gold pieces each\n0-3 Part-time Assistant Coaches – 20,000 gold pieces each\n0-1 Weather Mage – 30,000 gold pieces\n0-1 Team Mascot - 30,000 gold pieces\n0-3 Cavorting Nurglings - 30,000 gold pieces (only available to teams with the 'Favoured of Nurgle' special rule)\n0-1 Master of Ballistics - 40,000 gold pieces (30,000 gold pieces for teams with the 'Halfling Thimble Cup' special rule) (only available to teams with the 'Halfling Thimble Cup' or 'Old World Classic' special rule)\n0-3 Bottles of Heady Brew - 40,000 gold pieces (only available to teams belonging to Tier 3)\n0-2 Bloodweiser Kegs – 50,000 gold pieces each\n0-1 Waaagh Drummer - 50,000 gold pieces (only available to teams with the 'Badlands Brawl' special rule)\n0-1 Dwarven Runesmith - 50,000 gold pieces (only available to teams with the 'Old World Classic' or 'World's Edge Superleague' special rule)\n0-1 Medical Unguent - 60,000 gold pieces\n0-1 Halfling Hotpot - 80,000 gold pieces (60,000 gold pieces to teams with the 'Halfling Thimble Cup') (only available to teams with the 'Halfling Thimble Cup' or 'Old World Classic' special rule)\n0-5 Special Plays – 100,000 gold pieces each\n0-8 Extra Team Training – 100,000 gold pieces each\n0-3 Bribes – 100,000 gold pieces each (50,000 gold pieces for teams with the ‘Bribery and Corruption’ special rule)\n0-2 Wandering Apothecaries – 100,000 gold pieces each (not available to teams that cannot hire an apothecary)\n0-1 Mortuary Assistant – 100,000 gold pieces (only available to teams with the ‘Sylvanian Spotlight’ special rule)\n0-1 Plague Doctor – 100,000 gold pieces (only available to teams with the ‘Favoured of Nurgle’ special rule)\n0-1 Riotous Rookies – 100,000 gold pieces (only available to teams with the ‘Low Cost Linemen’ special rule) • 0-1 Halfling Master Chef – 300,000 gold pieces (100,000 gold pieces for teams with the ‘Halfling Thimble Cup’ special rule)\n0-1 Side Bet - 10,000-100,000 gold pieces\nUnlimited Mercenary Players – price varies\n0-2 Star Players – price varies\n0-2 (In)Famous Coaching Staff – price varies\n0-1 Wizard – price varies\n0-1 Biased Referee – price varies"
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+  # elsif a_question.match?(/^$/i)
+  #   ""
+
   # OTHER
   elsif a_question.match?(/^injury$/i)
     "2-7 Stunned: the player immediately becomes Stunned, as described on page 27, and is laid face-down on the pitch.\n\n 8-9 KO'd: the player is immediately removed from play and placed in the Knocked-out box of their team dugout. At the end of each drive, there is a chance any Knocked-out players will recover, as described on page 66.\n\n10+ Casualty!: the player becomes a casualty and is immediately removed from play and placed in the Casualty box of their team dugout. The coach of the opposing team immediately makes a Casualty roll, as described on page 61."
@@ -258,6 +284,7 @@ elsif a_question.match?(/^STRENGTH$/i)
     "1-6 Badly Hurt: the player misses the rest of this game, but suffers no long-term effect.\n\n7-9 Seriously Hurt: MNG\n\n10-12 Serious Injury: NI and MNG\n\n13-14 Lasting Injury: Characteristic reduction and MNG\n\n15-16 DEAD: this player is far too dead to play Blood Bowl!"
   elsif a_question.match?(/^lasting injury$/i)
     "1-2 Head Injury: -1 AV\n\n3 Smashed Knee: -1 MA\n\n4 Broken Arm: -1 PA\n\n5 Neck Injury: -1 AG\n\n6 Dislocated Shoulder: -1 ST"
+  
   # elsif a_question.match?(/^$/i)
   #   ""
   # elsif a_question.match?(/^$/i)
